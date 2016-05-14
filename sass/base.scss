@@ -1,0 +1,57 @@
+$base-font-size: 16px;
+$base-line-height: 1.625;
+
+$small: 321px;
+$medium: 961px;
+$large: 1441px;
+$huge: 1921px;
+
+$quarter-medium: 481px;
+$half-medium: 641px;
+
+$quarter-large: 721px;
+
+// Colors
+$hard-grey: #777;
+$soft-grey: #ccc;
+$light-grey: #eee;
+
+* {
+	-webkit-tap-highlight-color: transparent;
+	outline: 0;
+}
+::selection {
+	background: #ffa;
+}
+:root {
+	font-family: $PtSans;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	min-width: 320px;
+}
+
+@viewport {
+    width: device-width;
+}
+
+figure, ul {
+    margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+@include border-box-sizing;
+
+$susy: (
+	columns: 12,
+	column-width: 100rem,
+	gutters: 1/100,
+	gutter-position: inside-static,
+	global-box-sizing: border-box
+);

@@ -1,0 +1,31 @@
+.header {
+	margin-bottom: $base-font-size;
+
+	&__container {
+		@include container(full);
+		display: flex;
+		height: 5rem;
+	}
+
+	&__hamburger {
+		line-height: 0;
+		margin: auto;
+		margin-right: 1.5rem;
+
+		@include breakpoint($medium) {
+			display: none;
+		}
+	}
+
+	&__menu-black {
+		overflow-x: hidden;
+
+		::-webkit-scrollbar {
+			display: none;
+		}
+
+		@include breakpoint($medium) {
+			position: relative;
+		}
+	}
+}

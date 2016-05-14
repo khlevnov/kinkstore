@@ -1,0 +1,79 @@
+.menu-black {
+	@include container();
+	background-color: #000;
+	color: #fff;
+	font-size: 1.25rem;
+	line-height: 2rem;
+	overflow-x: auto;
+	white-space: nowrap;
+
+	@include breakpoint($half-medium) {
+		overflow: auto;
+	}
+
+	@include with-layout(12 1/4 inside-static fluid no-gutters) {
+		&__container {
+			animation-delay: 0.5s;
+			animation-duration: 1s;
+			animation-name: main-menu-initial-scroll;
+			animation-fill-mode: forwards;
+			margin-left: 0;
+			text-align: center;
+
+			@include breakpoint($half-medium) {
+				animation: none;
+			}
+
+			@include breakpoint($medium) {
+				@include span(10);
+				@include isolate(2);
+			}
+
+			@include breakpoint($large) {
+				@include span(8);
+				@include isolate(3);
+			}
+
+			@include breakpoint($huge) {
+				@include span(6);
+				@include isolate(4);
+			}
+		}
+
+		&__item {
+			text-align: center;
+			display: inline-block;
+
+			@include breakpoint($quarter-large) {
+				@include span(2 of 12);
+			}
+		}
+
+		&__link {
+			color: #fff;
+			display: block;
+			height: 100%;
+			padding: 0 1rem;
+			text-decoration: none;
+			width: 100%;
+
+			@include breakpoint($quarter-large) {
+				padding: 0;
+
+				&:hover, &.is-active {
+					background-color: #fff;
+					color: #000;
+				}
+			}
+		}
+	}
+}
+
+@keyframes main-menu-initial-scroll {
+	from {
+		margin-left: -10rem;
+	}
+	to {
+		margin-left: 0;
+	}
+}
