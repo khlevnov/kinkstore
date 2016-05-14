@@ -1,0 +1,39 @@
+{
+  "name": "kinkstore",
+  "version": "3.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.0",
+    "browser-sync": "^2.11.1",
+    "del": "^2.2.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.2",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg-sprite": "^1.2.19",
+    "hamburgers": "^0.5.0",
+    "node-normalize-scss": "^1.1.1",
+    "require-dir": "^0.3.0",
+    "stream-combiner2": "^1.1.1",
+    "susy": "^2.2.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khlevnov/kinkstore.git"
+  },
+  "author": "Oleg Khlevnov",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/khlevnov/kinkstore/issues"
+  },
+  "homepage": "https://github.com/khlevnov/kinkstore#readme"
+}
