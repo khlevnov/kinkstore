@@ -1,2 +1,3 @@
 *.css.map
+/build/images/
 /node_modules/

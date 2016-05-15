@@ -1,0 +1,138 @@
+$catalog-menu-row-height: 3rem;
+
+.menu-catalog {
+	@include with-layout(12 1/4 inside-static fluid no-gutters) {
+		@include container();
+		background-color: #fff;
+		color: #000;
+		display: none;
+		font-size: 1.25rem;
+		left: 0;
+		line-height: $catalog-menu-row-height;
+		margin-bottom: 4rem;
+		opacity: 0;
+		padding: 0 1rem;
+		position: absolute;
+		text-align: left;
+		top: 5rem; // Равна высоте белого блока шапки
+		transition: opacity 0.2s ease;
+		width: 100%;
+		z-index: 10;
+
+		@include breakpoint($medium) {
+			@include span(10);
+			@include isolate(2);
+			line-height: $base-line-height;
+			margin-bottom: 0;
+			padding: $base-font-size * $base-line-height 0;
+			top: $base-font-size * $base-line-height;
+		}
+
+		@include breakpoint($large) {
+			@include span(8);
+			@include isolate(3);
+		}
+
+		@include breakpoint($huge) {
+			@include span(6);
+			@include isolate(4);
+		}
+
+		&__section {
+			border-top: 1px solid $light-grey;
+			cursor: pointer;
+			font-weight: bold;
+			position: relative;
+
+			&:last-child {
+				border-bottom: 1px solid $light-grey;
+			}
+
+			@include breakpoint($medium) {
+				@include span(2 of 12);
+				border: none;
+				padding: 0;
+				text-align: center;
+
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+
+			&-title {
+				padding: 0 1rem;
+				$side-lenght: 0.5rem;
+				$arrow-height: 0.7 * $side-lenght;
+
+				&::after {
+					border-bottom: 2px solid #000;
+					border-left: 2px solid #000;
+					content: '';
+					height: $side-lenght;
+					position: absolute;
+					right: 1rem;
+					top: 1/2 * $catalog-menu-row-height - $arrow-height;
+					transition: all 0.2s ease;
+					transform: rotateZ(-45deg);
+					width: $side-lenght;
+				}
+
+				@include breakpoint($medium) {
+					padding: 0;
+				}
+
+				&.active {
+					&::after {
+						transform: rotateZ(135deg);
+					}
+				}
+			}
+
+			&-link {
+				display: block;
+				padding: 0 1rem;
+
+				@include breakpoint($medium) {
+					padding: 0;
+				}
+			}
+		}
+
+		&__categories {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s linear;
+
+			@include breakpoint($medium) {
+				display: block !important;
+			}
+
+			&.visible {
+				max-height: $catalog-menu-row-height * 12; // На 12 строк запас для цсс анимации
+			}
+		}
+
+		&__category {
+			border-top: 1px solid $light-grey;
+			font-weight: normal;
+
+			@include breakpoint($medium) {
+				border: none;
+			}
+		}
+
+		&__link {
+			display: block;
+			padding: 0 2rem;
+
+			@include breakpoint($medium) {
+				padding: 0;
+			}
+		}
+
+		&.visible {
+			display: block;
+			opacity: 1;
+		}
+	}
+}

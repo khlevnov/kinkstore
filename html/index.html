@@ -3,14 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>KINK store — Главная страница</title>
-	<link rel="stylesheet" href="/styles/styles.css" media="screen" charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
+	<link rel="stylesheet" href="/styles/styles.css" media="screen" charset="utf-8">
 </head>
 <body>
 	<header class="header">
 		<div class="header__container">
 			<div class="header__hamburger">
-				<div class="hamburger hamburger--spin">
+				<div class="hamburger  hamburger--spin  js-menu-catalog-button">
 					<span class="hamburger-box">
 						<span class="hamburger-inner"></span>
 					</span>
@@ -22,7 +24,63 @@
 			<div class="menu-black">
 				<ul class="menu-black__container">
 					<li class="menu-black__item">
-						<a href="#" class="menu-black__link">Каталог</a>
+						<a href="#" class="menu-black__link  js-menu-catalog-button">Каталог</a>
+						<ul class="menu-catalog  js-menu-catalog">
+							<li class="menu-catalog__section">
+								<a href="#" class="menu-catalog__section-link">Новые товары</a>
+							</li>
+							<li class="menu-catalog__section">
+								<a href="#" class="menu-catalog__section-link">Товары со скидкой</a>
+							</li>
+							<li class="menu-catalog__section">
+								<div class="menu-catalog__section-title js-catalog-section-button">Мужская обувь</div>
+								<ul class="menu-catalog__categories">
+									<li class="menu-catalog__category">
+										<a href="#" class="menu-catalog__link">Кеды</a>
+									</li>
+									<li class="menu-catalog__category">
+										<a href="#" class="menu-catalog__link">Кроссовки</a>
+									</li>
+									<li class="menu-catalog__category">
+										<a href="#" class="menu-catalog__link">Зимняя</a>
+									</li>
+									<li class="menu-catalog__category">
+										<a href="#" class="menu-catalog__link">Летняя</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-catalog__section">
+								<div class="menu-catalog__section-title js-catalog-section-button">Женская обувь</div>
+								<ul class="menu-catalog__categories">
+									<li class="menu-catalog__category">
+										<a href="#" class="menu-catalog__link">Туфли</a>
+									</li>
+									<li class="menu-catalog__category">
+										<a href="#" class="menu-catalog__link">Кроссовки</a>
+									</li>
+									<li class="menu-catalog__category">
+										<a href="#" class="menu-catalog__link">Зимняя</a>
+									</li>
+									<li class="menu-catalog__category">
+										<a href="#" class="menu-catalog__link">Кеды</a>
+									</li>
+									<li class="menu-catalog__category">
+										<a href="#" class="menu-catalog__link">Сандалии</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-catalog__section">
+								<div class="menu-catalog__section-title js-catalog-section-button">Детская обувь</div>
+								<ul class="menu-catalog__categories">
+									<li class="menu-catalog__category">
+										<a href="#" class="menu-catalog__link">Кеды</a>
+									</li>
+									<li class="menu-catalog__category">
+										<a href="#" class="menu-catalog__link">Кроссовки</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
 					</li>
 					<li class="menu-black__item">
 						<a href="#" class="menu-black__link">Sale</a>
@@ -44,5 +102,9 @@
 		</div>
 	</header>
 	<footer></footer>
+
+	<script src="//code.jquery.com/jquery-2.2.3.min.js"></script>
+	<script src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+	<script src="/js/script.js"></script>
 </body>
 </html>
