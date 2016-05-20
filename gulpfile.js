@@ -8,7 +8,7 @@ requireDir('./tasks');
 gulp.task('watch', function() {
 	gulp.watch('sass/**/*.*', gulp.series('sass'));
 	gulp.watch('html/*.*', gulp.series('html'));
-	gulp.watch('js/*.*', gulp.series('browserify'));
+	gulp.watch('js/**/*.*', gulp.series('browserify'));
 });
 
 gulp.task('build',
