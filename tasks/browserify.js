@@ -5,7 +5,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const babelify = require('babelify');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
-const watchify = require('watchify');
 
 gulp.task('browserify', function() {
     return browserify('js/index.js')
