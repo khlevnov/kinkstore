@@ -2,14 +2,15 @@
 
 const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
+const babelify = require('babelify');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const watchify = require('watchify');
 
-gulp.task('babel', function () {
-    return gulp.src('js/**/*.js')
-        .pipe(sourcemaps.init())
-        .pipe(babel({
-            presets: ['es2015']
-        }))
-        .pipe(concat('app.js'))
-        .pipe(sourcemaps.write('.'))
+gulp.task('browserify', function() {
+    return browserify('js/index.js')
+        .transform('babelify', { presets: ['es2015'] })
+        .bundle()
+        .pipe(source('app.js'))
         .pipe(gulp.dest('build/js'));
 });

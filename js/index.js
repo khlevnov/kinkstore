@@ -1,5 +1,5 @@
-import { CatalogMenu } from 'classes/CatalogMenu.js';
+import CatalogMenu from './blocks/CatalogMenu.js';
 
-var catalogMenu = new CatalogMenu;
-var variable = CatalogMenu.getVariable();
+var menu = new CatalogMenu;
+var variable = menu.a;
 console.log(variable);

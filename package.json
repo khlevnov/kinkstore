@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "babelify": "^7.3.0",
     "breakpoint-sass": "^2.7.0",
     "browser-sync": "^2.11.1",
     "browserify": "^13.0.1",
