@@ -5,13 +5,14 @@ const browserSync = require('browser-sync');
 
 gulp.task('sync', function() {
 	browserSync.init({
-		host: 'build.kink3.localhost',
+		host: 'kink3.localhost',
 		open: 'external',
-		proxy: 'build.kink3.localhost',
+		proxy: 'kink3.localhost',
 		notify: false
 	});
 	browserSync.watch([
-		'html/**',
+		'build/*.html',
+        'build/js/app.js',
 		'build/styles/styles.css',
 	]).on('change', browserSync.reload);
 });

@@ -5,8 +5,6 @@ const del = require('del');
 
 gulp.task('clean', function() {
 	return del([
-		'./build/*.html',
-		'./build/styles/*',
-		'./build/fonts/*'
+		'./build/'
 	]);
 });
