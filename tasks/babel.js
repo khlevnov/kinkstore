@@ -8,7 +8,9 @@ const concat = require('gulp-concat');
 gulp.task('babel', function () {
     return gulp.src('js/**/*.js')
         .pipe(sourcemaps.init())
-        .pipe(babel())
+        .pipe(babel({
+            presets: ['es2015']
+        }))
         .pipe(concat('app.js'))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('build/js'));
