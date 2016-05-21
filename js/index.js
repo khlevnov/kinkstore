@@ -1,1 +1,1 @@
-import CatalogMenu from './blocks/CatalogMenu.js';
+import './blocks/MenuCatalog.js';
