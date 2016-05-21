@@ -16,5 +16,5 @@ gulp.task('build',
 );
 
 gulp.task('default',
-	gulp.series('clean', 'build', gulp.parallel('watch', 'sync'))
+	gulp.series('build', gulp.parallel('watch', 'sync'))
 );
