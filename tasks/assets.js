@@ -3,6 +3,8 @@
 const gulp = require('gulp');
 
 gulp.task('assets', function() {
-	return gulp.src('assets/**')
-		.pipe(gulp.dest('build'));
+	return gulp.src([
+        'assets/**',
+        '!assets/svg'
+    ]).pipe(gulp.dest('build'));
 });
