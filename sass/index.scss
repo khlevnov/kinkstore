@@ -3,12 +3,16 @@
 @import 'susy';
 
 @import 'fonts';
+@import 'grid';
 @import 'base';
 
 @import 'dependecies/swiper';
 
+@import 'blocks/icon';
+@import 'blocks/footer';
 @import 'blocks/hamburger';
 @import 'blocks/header';
 @import 'blocks/menu-black';
 @import 'blocks/menu-catalog';
 @import 'blocks/slider';
+@import 'blocks/wrapper';

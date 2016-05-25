@@ -58,45 +58,45 @@ $catalog-menu-row-height: 3rem;
 					border-bottom: none;
 				}
 			}
-
-			&-title {
-				padding: 0 1rem;
-				$side-lenght: 0.5rem;
-				$arrow-height: 0.7 * $side-lenght;
-
-				&::after {
-					border-bottom: 2px solid #000;
-					border-left: 2px solid #000;
-					content: '';
-					height: $side-lenght;
-					position: absolute;
-					right: 1rem;
-					top: 1/2 * $catalog-menu-row-height - $arrow-height;
-					transition: all 0.2s ease;
-					transform: rotateZ(-45deg);
-					width: $side-lenght;
-				}
-
-				@include breakpoint($medium) {
-					padding: 0;
-				}
-
-				&.active {
-					&::after {
-						transform: rotateZ(135deg);
-					}
-				}
-			}
-
-			&-link {
-				display: block;
-				padding: 0 1rem;
-
-				@include breakpoint($medium) {
-					padding: 0;
-				}
-			}
 		}
+
+        &__section-title {
+            padding: 0 1rem;
+            $side-lenght: 0.5rem;
+            $arrow-height: 0.7 * $side-lenght;
+
+            &::after {
+                border-bottom: 2px solid #000;
+                border-left: 2px solid #000;
+                content: '';
+                height: $side-lenght;
+                position: absolute;
+                right: 1rem;
+                top: 1/2 * $catalog-menu-row-height - $arrow-height;
+                transition: all 0.2s ease;
+                transform: rotateZ(-45deg);
+                width: $side-lenght;
+            }
+
+            @include breakpoint($medium) {
+                padding: 0;
+            }
+
+            &.active {
+                &::after {
+                    transform: rotateZ(135deg);
+                }
+            }
+        }
+
+        &__section-link {
+            display: block;
+            padding: 0 1rem;
+
+            @include breakpoint($medium) {
+                padding: 0;
+            }
+        }
 
 		&__categories {
 			max-height: 0;

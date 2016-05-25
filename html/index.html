@@ -7,6 +7,9 @@
 	<link rel="stylesheet" href="/styles/styles.css" media="screen" charset="utf-8">
 </head>
 <body>
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden">
+        <!-- inject:svg --><!-- endinject -->
+    </div>
 	<header class="header">
 		<div class="header__container">
 			<div class="header__hamburger">
@@ -99,8 +102,8 @@
 			</div>
 		</div>
 	</header>
-    <div class="wrapper">
-
+    <section class="wrapper">
+    <!--
         <div class="slider swiper-container">
             <div class="slider__inner swiper-wrapper">
                 <figure class="slider__slide swiper-slide">
@@ -139,9 +142,91 @@
             </div>
             <div class="slider__pagination swiper-pagination"></div>
         </div>
-
-    </div>
-	<footer></footer>
+    -->
+    </section>
+	<footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__section">
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Каталог</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Блог</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Магазин</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Информация</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Контакты</a>
+                    </li>
+                </ul>
+                <div class="footer__nike">
+                    <svg width="200" height="37" class="icon icon--nike-online-partner" viewBox="0 0 150 28">
+                        <use xlink:href="/images/icons.svg#nike-online-partner"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="footer__section">
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Доставка и оплата</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Обмен и возврат</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Подлинность товаров</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Скидки</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Материалы и уход за ними</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Размерная сетка</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Реквизиты</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Вакансии</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__section">
+                Присоединяйтесь к нам
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Вконтакте</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Vimeo</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">Instagram</a>
+                    </li>
+                </ul>
+                <br />
+                <a href="#" class="footer__link">Скачать логотип</a>
+            </div>
+            <div class="footer__section">
+                Нижний Новгород<br />
+                Большая Покровская, 68<br />
+                <a href="tel:+78314303927" class="footer__link">+7 (831) 430-39-27</a><br />
+            </div>
+            <div class="footer__section">
+                www.kinkstore.ru<br />
+                Основан в 2010 году<br />
+                <br />
+            </div>
+            <div class="footer__section"></div>
+        </div>
+	</footer>
 	<script src="/js/app.js"></script>
 </body>
 </html>
