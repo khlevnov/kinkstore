@@ -65,4 +65,12 @@
             border-bottom-color: transparent;
         }
     }
+
+    &__nike {
+        margin-top: 2rem;
+        width: 200px;
+        @include breakpoint($quarter-medium) {
+            margin-top: 3.5rem;
+        }
+    }
 }
