@@ -1,0 +1,45 @@
+.footer {
+    background: black;
+    color: white;
+    @include container;
+
+    &__inner {
+        @include span(10 of 12 no-gutter);
+        @include isolate(2);
+    }
+
+    &__section {
+        font-size: 1.25rem;
+        margin-top: 2rem;
+        @include span(full nest);
+
+        @include breakpoint($quarter-medium $medium) {
+            @include span(6 of 12);
+
+            &:nth-child(2n) {
+                @include last();
+            }
+
+            &:nth-child(2n+1) {
+                clear: both;
+            }
+        }
+
+        @include breakpoint($medium) {
+            @include span(4 of 12);
+
+            &:nth-child(3n) {
+                @include last();
+            }
+
+            &:nth-child(3n+1) {
+                clear: both;
+            }
+        }
+    }
+
+    &__link {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        color: white;
+    }
+}

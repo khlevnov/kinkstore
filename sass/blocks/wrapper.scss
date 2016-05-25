@@ -1,0 +1,5 @@
+.wrapper {
+    // Вычитаем высоту блока шапки, черного меню и отступа под ним
+    min-height: calc(100vh - (5rem + 2rem + 1rem));
+    position: relative;
+}
