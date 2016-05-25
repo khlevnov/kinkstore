@@ -1,6 +1,7 @@
 .footer {
     background: black;
     color: white;
+    padding-bottom: 2rem;
     @include container;
 
     &__inner {
@@ -10,8 +11,19 @@
 
     &__section {
         font-size: 1.25rem;
-        margin-top: 2rem;
+        padding-top: 2rem;
         @include span(full nest);
+
+        @include breakpoint($quarter-medium) {
+            border-top: 1px solid white;
+            margin-top: 2rem;
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                border-top: none;
+                margin-top: 0;
+            }
+        }
 
         @include breakpoint($quarter-medium $medium) {
             @include span(6 of 12);
@@ -28,6 +40,13 @@
         @include breakpoint($medium) {
             @include span(4 of 12);
 
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                border-top: none;
+                margin-top: 0;
+            }
+
             &:nth-child(3n) {
                 @include last();
             }
@@ -39,7 +58,11 @@
     }
 
     &__link {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         color: white;
+
+        &:hover {
+            border-bottom-color: transparent;
+        }
     }
 }
