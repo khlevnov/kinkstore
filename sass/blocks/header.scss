@@ -1,16 +1,62 @@
 .header {
+    @include container();
 	margin-bottom: $base-font-size;
 
-	&__container {
-		@include container(full);
-		display: flex;
-		height: 5rem;
+	&__inner {
+        @include span(full);
+		height: 4rem;
+
+        @include breakpoint($half-medium) {
+    		height: 5rem;
+        }
+
+        @include breakpoint($medium) {
+            @include span(10);
+            @include isolate(2);
+        }
+
+        @include breakpoint($large) {
+            @include span(8);
+            @include isolate(3);
+        }
+
+        @include breakpoint($huge) {
+            @include span(6);
+            @include isolate(4);
+        }
 	}
 
+    &__logo {
+        @include span(4);
+        align-items: center;
+        height: 100%;
+        display: flex;
+
+        > .icon {
+            width: 80px;
+        }
+
+        @include breakpoint($half-medium) {
+            > .icon {
+                width: 120px;
+            }
+        }
+    }
+
 	&__hamburger {
+        @include span(4);
+        @include last();
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
 		line-height: 0;
 		margin: auto;
-		margin-right: 1.5rem;
+		padding-right: 1rem;
+
+        @include breakpoint($half-medium) {
+            padding-right: 1.5rem;
+        }
 
 		@include breakpoint($medium) {
 			display: none;
@@ -18,6 +64,9 @@
 	}
 
 	&__menu-black {
+        @include span(full no-gutter);
+        clear: both;
+
 		::-webkit-scrollbar {
 			display: none;
 		}
