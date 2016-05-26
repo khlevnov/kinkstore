@@ -1,0 +1,8 @@
+.content {
+    @include container();
+
+    &__slider {
+        @include span(full no-gutter);
+        margin-bottom: 1rem;
+    }
+}

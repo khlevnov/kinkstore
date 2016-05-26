@@ -3,33 +3,25 @@
     overflow: hidden;
 
 	&__slide {
-		height: 320px;
+		height: auto;
 		overflow: hidden;
 		position: relative;
-
-		@include breakpoint($medium) {
-			height: auto;
-		}
 	}
 
 	&__image {
-		display: block;
-		height: 320px;
-		left: 50%;
-		margin-left: -160px;
-		position: absolute;
-		width: 320px;
+        display: block;
+		height: 100vw;
+		width: 100vw;
 		z-index: 1;
 
-		@include breakpoint($small) {
-			margin-left: -480px;
-			width: auto;
-		}
-		@include breakpoint($medium) {
-			height: auto;
-			margin-left: 0;
-			position: static;
-			width: 100%;
+		@include breakpoint(500px) {
+    		display: block;
+    		height: 500px;
+    		left: 50%;
+    		margin-left: -750px;
+            position: relative;
+    		width: 1500px;
+    		z-index: 1;
 		}
 	}
 

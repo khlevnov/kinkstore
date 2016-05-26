@@ -1,6 +1,6 @@
 .header {
     @include container();
-	margin-bottom: $base-font-size;
+	margin-bottom: 1rem;
 
 	&__inner {
         @include span(full);
