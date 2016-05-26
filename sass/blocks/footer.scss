@@ -5,16 +5,30 @@
     @include container;
 
     &__inner {
-        @include span(10 of 12 no-gutter);
-        @include isolate(2);
+        @include span(full);
+
+        @include breakpoint($quarter-medium) {
+            @include span(10);
+            @include isolate(2);
+        }
+
+        @include breakpoint($large) {
+            @include span(8);
+            @include isolate(3);
+        }
+
+        @include breakpoint($huge) {
+            @include span(6);
+            @include isolate(4);
+        }
     }
 
     &__section {
         font-size: 1.25rem;
         padding-top: 2rem;
-        @include span(full nest);
+        @include span(full);
 
-        @include breakpoint($quarter-medium) {
+        @include breakpoint($half-medium) {
             border-top: 1px solid white;
             margin-top: 2rem;
 
@@ -25,8 +39,8 @@
             }
         }
 
-        @include breakpoint($quarter-medium $medium) {
-            @include span(6 of 12);
+        @include breakpoint($half-medium $medium) {
+            @include span(6);
 
             &:nth-child(2n) {
                 @include last();
@@ -69,7 +83,8 @@
     &__nike {
         margin-top: 2rem;
         width: 200px;
-        @include breakpoint($quarter-medium) {
+
+        @include breakpoint($half-medium) {
             margin-top: 3.5rem;
         }
     }

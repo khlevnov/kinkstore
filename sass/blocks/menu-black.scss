@@ -12,7 +12,7 @@
 	}
 
 	@include with-layout(12 1/4 inside-static fluid no-gutters) {
-		&__container {
+		&__inner {
 			animation-delay: 0.5s;
 			animation-duration: 1s;
 			animation-name: main-menu-initial-scroll;

@@ -21,14 +21,7 @@ export default class MenuCatalog
     }
 
     toggleSection() {
-        if (this.classList.contains('active')) {
-            this.classList.remove('active');
-            this.nextElementSibling.classList.remove('visible');
-        } else {
-            this.classList.add('active');
-            this.nextElementSibling.classList.add('visible');
-        }
+        this.classList.toggle('active');
+        this.nextElementSibling.classList.toggle('visible');
     }
 }
-
-var menu = new MenuCatalog;

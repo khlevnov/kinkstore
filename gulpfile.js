@@ -7,13 +7,13 @@ requireDir('./tasks');
 
 gulp.task('watch', function() {
 	gulp.watch('sass/**/*.*', gulp.series('sass'));
-	gulp.watch('html/*.*', gulp.series('html'));
+	gulp.watch('html/*.*', gulp.series('html', 'svgstore'));
 	gulp.watch('js/**/*.*', gulp.series('browserify'));
 	gulp.watch('assets/svg/**/*.svg', gulp.series('svgstore'));
 });
 
 gulp.task('build',
-	gulp.parallel('html', 'sass', 'assets', 'browserify', 'svgstore')
+    gulp.series('html', gulp.parallel('svgstore', 'sass', 'assets', 'browserify'))
 );
 
 gulp.task('default',
