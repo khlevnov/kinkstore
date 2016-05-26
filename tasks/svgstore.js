@@ -6,7 +6,7 @@ const gulp = require('gulp'),
     inject = require('gulp-inject');
 
 gulp.task('svgstore', function () {
-    return gulp
+    var svgs = gulp
         .src('assets/svg/*.svg')
         .pipe(svgmin())
         .pipe(cheerio({
@@ -15,7 +15,14 @@ gulp.task('svgstore', function () {
             },
             parserOptions: { xmlMode: true }
         }))
-        .pipe(svgstore())
-        .pipe(rename('icons.svg'))
-        .pipe(gulp.dest('build/images'));
+        .pipe(svgstore({ inlineSvg: true }));
+
+        function fileContents (filePath, file) {
+            return file.contents.toString();
+        }
+
+        return gulp
+            .src('build/index.html')
+            .pipe(inject(svgs, { transform: fileContents }))
+            .pipe(gulp.dest('build'));
 });

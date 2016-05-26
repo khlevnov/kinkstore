@@ -4,6 +4,7 @@ const gulp = require('gulp');
 
 gulp.task('assets', function() {
 	return gulp.src([
-        'assets/**'
+        'assets/**/*.*',
+        '!assets/**/*.svg'
     ]).pipe(gulp.dest('build'));
 });
