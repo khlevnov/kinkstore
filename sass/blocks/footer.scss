@@ -5,8 +5,18 @@
     @include container;
 
     &__inner {
-        @include span(10 of 12 no-gutter);
+        @include span(10 no-gutter);
         @include isolate(2);
+
+        @include breakpoint($large) {
+            @include span(8);
+            @include isolate(3);
+        }
+
+        @include breakpoint($huge) {
+            @include span(6);
+            @include isolate(4);
+        }
     }
 
     &__section {
@@ -14,7 +24,7 @@
         padding-top: 2rem;
         @include span(full nest);
 
-        @include breakpoint($quarter-medium) {
+        @include breakpoint($half-medium) {
             border-top: 1px solid white;
             margin-top: 2rem;
 
@@ -25,7 +35,7 @@
             }
         }
 
-        @include breakpoint($quarter-medium $medium) {
+        @include breakpoint($half-medium $medium) {
             @include span(6 of 12);
 
             &:nth-child(2n) {
@@ -69,7 +79,8 @@
     &__nike {
         margin-top: 2rem;
         width: 200px;
-        @include breakpoint($quarter-medium) {
+        
+        @include breakpoint($half-medium) {
             margin-top: 3.5rem;
         }
     }
