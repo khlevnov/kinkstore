@@ -1,0 +1,17 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="uf8")
+        title KINK store — Главная страница
+        meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no")
+        link(href="/styles/styles.css")
+    body
+        div(style="display: none").
+            <!-- inject:svg --><!-- endinject -->
+        .wrapper
+            header.header
+                .header__inner
+                    .header__logo
+                        svg.icon(width="120", height="48", viewbox="0 0 120 48")
+                            use(xlink:href="#kink")
+                    .header__hamburger
