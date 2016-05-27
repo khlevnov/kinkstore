@@ -15,3 +15,130 @@ html(lang="ru")
                         svg.icon(width="120", height="48", viewbox="0 0 120 48")
                             use(xlink:href="#kink")
                     .header__hamburger
+                        .hamburger.hamburger--spin.js-menu-catalog-toggle
+                            span.hamburger-box
+                                span.hamburger-inner
+                .header__menu-black
+                    .menu-black
+                        ul.menu-black__inner
+                            li.menu-black__item
+                                a.menu-black__link.js-menu-catalog-toggle(href="#") Каталог
+                                ul.menu-catalog
+                                    li.menu-catalog__section
+                                        a.menu-catalog__section-link(href="#") Новые товары
+                                    li.menu-catalog__section
+                                        a.menu-catalog__section-link(href="#") Товары со скидкой
+                                    li.menu-catalog__section
+                                        .menu-catalog__section-title Мужская обувь
+                                            ul.menu-catalog__categories
+                                                li.menu-catalog__category
+                                                    a.menu-catalog__link(href="#") Кеды
+                                                li.menu-catalog__category
+                                                    a.menu-catalog__link(href="#") Кроссовки
+                                                li.menu-catalog__category
+                                                    a.menu-catalog__link(href="#") Зимняя
+                                                li.menu-catalog__category
+                                                    a.menu-catalog__link(href="#") Летняя
+                                    li.menu-catalog__section
+                                        .menu-catalog__section-title Женская обувь
+                                            ul.menu-catalog__categories
+                                                li.menu-catalog__category
+                                                    a.menu-catalog__link(href="#") Туфли
+                                                li.menu-catalog__category
+                                                    a.menu-catalog__link(href="#") Кроссовки
+                                                li.menu-catalog__category
+                                                    a.menu-catalog__link(href="#") Зимняя
+                                                li.menu-catalog__category
+                                                    a.menu-catalog__link(href="#") Кеды
+                                                li.menu-catalog__category
+                                                    a.menu-catalog__link(href="#") Сандалии
+                                    li.menu-catalog__section
+                                        .menu-catalog__section-title Детская обувь
+                                            ul.menu-catalog__categories
+                                                li.menu-catalog__category
+                                                    a.menu-catalog__link(href="#") Кеды
+                                                li.menu-catalog__category
+                                                    a.menu-catalog__link(href="#") Кроссовки
+                                                li.menu-catalog__category
+                            li.menu-black__item
+                                a.menu-black__link(href="#") Sale
+                            li.menu-black__item
+                                a.menu-black__link(href="#") Блог
+                            li.menu-black__item
+                                a.menu-black__link(href="#") Магазин
+                            li.menu-black__item
+                                a.menu-black__link(href="#") Информация
+                            li.menu-black__item
+                                a.menu-black__link(href="#") Контакты
+            main.content
+                section.content__slider
+                    .slider.swiper-container
+                        .slider__inner.swiper-wrapper
+                            figure.slider__slide.swiper-slide
+                                picture
+                                    source(media="(min-width: 500px)", srcset="/images/3spring_1500.jpg")
+                                    img.slider__image(src="/images/3spring_500.jpg")
+                            figure.slider__slide.swiper-slide
+                                picture
+                                    source(media="(min-width: 500px)", srcset="/images/1lookbook_1500.jpg")
+                                    img.slider__image(src="/images/1lookbook_500.jpg")
+                            figure.slider__slide.swiper-slide
+                                picture
+                                    source(media="(min-width: 500px)", srcset="/images/2adidas_1500.jpg")
+                                    img.slider__image(src="/images/2adidas_500.jpg")
+                        .slider__pagination.swiper-pagination
+        footer.footer
+            .footer__inner
+                .footer__section
+                    ul.footer__list
+                        li.footer__list-item
+                            a.footer__link(href="#") Каталог
+                        li.footer__list-item
+                            a.footer__link(href="#") Блог
+                        li.footer__list-item
+                            a.footer__link(href="#") Магазин
+                        li.footer__list-item
+                            a.footer__link(href="#") Информация
+                        li.footer__list-item
+                            a.footer__link(href="#") Контакты
+                    .footer__nike
+                        svg.icon.icon--gray(width="200", height="37", viewBox="0 0 150 28")
+                            use(xlink:href="#nike-online-partner")
+                .footer__section
+                    ul.footer__list
+                        li.footer__list-item
+                            a.footer__link(href="#") Доставка и оплата
+                        li.footer__list-item
+                            a.footer__link(href="#") Обмен и возврат
+                        li.footer__list-item
+                            a.footer__link(href="#") Подлинность товаров
+                        li.footer__list-item
+                            a.footer__link(href="#") Скидки
+                        li.footer__list-item
+                            a.footer__link(href="#") Материалы и уход за ними
+                        li.footer__list-item
+                            a.footer__link(href="#") Размерная сетка
+                        li.footer__list-item
+                            a.footer__link(href="#") Реквизиты
+                        li.footer__list-item
+                            a.footer__link(href="#") Вакансии
+                        li.footer__list-item
+                .footer__section
+                    ul.footer__list
+                        li.footer__list-item
+                            a.footer__link(href="#") Вконтакте
+                        li.footer__list-item
+                            a.footer__link(href="#") Vimeo
+                        li.footer__list-item
+                            a.footer__link(href="#") Instagram
+                        li.footer__list-item
+                    br
+                    a.footer__link(href="#") Скачать логотип
+                .footer__section
+                    | Нижний Новгород
+                    | Большая Покровская, 68
+                    a.footer__link(href="tel:+78314303927") +7 (831) 430-39-27
+                .footer__section
+                    | www.kinkstore.ru
+                    | Основан в 2010 году
+    script(src="/js/app.js")
