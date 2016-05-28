@@ -1,13 +1,13 @@
 doctype html
 html(lang="ru")
     head
-        meta(charset="uf8")
+        meta(charset="UTF-8")
         title KINK store — Главная страница
         meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no")
-        link(href="/styles/styles.css")
+        link(rel="stylesheet", href="/styles/styles.css", media="screen", charset="utf-8")
     body
-        div(style="display: none").
-            <!-- inject:svg --><!-- endinject -->
+        div(style="height: 0; width: 0; position: absolute; visibility: hidden")
+            | <!-- inject:svg --><!-- endinject -->
         .wrapper
             header.header
                 .header__inner
