@@ -1,0 +1,28 @@
+.blog-preview {
+    overflow-x: hidden;
+    width: 100%;
+
+    &__inner {
+        @include container();
+        margin: 0 -2 * gutter();
+    }
+
+    &__item {
+        @include span(full);
+        margin-bottom: 2*gutter();
+
+        @include breakpoint($medium) {
+            @include span(6);
+        }
+
+        @include breakpoint($medium $large) {
+            &:last-child {
+                display: none;
+            }
+        }
+
+        @include breakpoint($large) {
+            @include span(4);
+        }
+    }
+}
