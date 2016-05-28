@@ -19,13 +19,18 @@ $catalog-menu-row-height: 3rem;
 		width: 100%;
 		z-index: 10;
 
+        @include breakpoint($half-medium) {
+            top: 5rem;
+        }
+
+
 		@include breakpoint($medium) {
 			@include span(10);
 			@include isolate(2);
 			line-height: $base-line-height;
 			margin-bottom: 0;
 			padding: $base-font-size * $base-line-height 0;
-			top: $base-font-size * $base-line-height;
+			top: 2rem;
 		}
 
 		@include breakpoint($large) {
