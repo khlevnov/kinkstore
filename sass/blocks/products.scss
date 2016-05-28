@@ -13,6 +13,13 @@
             width: span(4);
         }
 
+        @include breakpoint($half-medium $medium) {
+            &:nth-last-child(1),
+            &:nth-last-child(2) {
+                display: none;
+            }
+        }
+
         @include breakpoint($medium) {
             padding: 0 1rem;
             width: span(3);

@@ -1,6 +1,15 @@
 .product {
     font-size: $base-font-size;
+    line-height: 1.25;
     text-align: center;
+
+    @include breakpoint($half-medium) {
+        font-size: 1.125rem;
+    }
+
+    @include breakpoint($large) {
+        font-size: 1.25rem;
+    }
 
     &__image {
         display: block;
@@ -8,7 +17,13 @@
         width: 100%;
     }
 
-    &__title {
+    &__price,
+    &__old-price {
+        padding: 0 4px;
+    }
 
+    &__old-price {
+        color: #999;
+        text-decoration: line-through;
     }
 }
