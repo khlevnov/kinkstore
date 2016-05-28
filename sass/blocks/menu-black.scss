@@ -29,15 +29,10 @@
 				@include isolate(2);
 			}
 
-			@include breakpoint($large) {
-				@include span(8);
-				@include isolate(3);
-			}
-
-			@include breakpoint($huge) {
-				@include span(6);
-				@include isolate(4);
-			}
+            @include breakpoint($huge) {
+                @include span(8);
+                @include isolate(3);
+            }
 		}
 
 		&__item {
