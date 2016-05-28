@@ -1,0 +1,9 @@
+.multicategories {
+    @include container();
+    margin: 0 -2 * gutter();
+
+    &__item {
+        @include span(full);
+        margin-bottom: 0.5rem;
+    }
+}
