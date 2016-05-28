@@ -23,7 +23,6 @@ $catalog-menu-row-height: 3rem;
             top: 5rem;
         }
 
-
 		@include breakpoint($medium) {
 			@include span(10);
 			@include isolate(2);
@@ -33,14 +32,9 @@ $catalog-menu-row-height: 3rem;
 			top: 2rem;
 		}
 
-		@include breakpoint($large) {
-			@include span(8);
-			@include isolate(3);
-		}
-
 		@include breakpoint($huge) {
-			@include span(6);
-			@include isolate(4);
+            @include span(8);
+			@include isolate(3);
 		}
 
 		&__section {
