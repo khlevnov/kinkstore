@@ -6,9 +6,9 @@ import requireDir from 'require-dir';
 requireDir('./gulp/develop');
 
 gulp.task('watch', function() {
-	gulp.watch('sass/**/*.*', gulp.series('sass'));
-	gulp.watch('html/*.*', gulp.series('html', 'svgstore'));
-	gulp.watch('assets/svg/**/*.svg', gulp.series('symbols'));
+	gulp.watch('./frontend/sass/**/*.scss', gulp.series('sass'));
+	gulp.watch('./frontend/html/**/*.html', gulp.series('html'));
+	gulp.watch('./frontend/assets/svg/**/*.svg', gulp.series('symbols'));
 });
 
 gulp.task(
@@ -17,7 +17,7 @@ gulp.task(
         'html',
         gulp.parallel(
             'symbols',
-            // 'sass',
+            'sass',
             'assets',
         )
     )

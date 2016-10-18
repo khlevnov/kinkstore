@@ -6,9 +6,9 @@ import browserSync from 'browser-sync';
 gulp.task('serve', function() {
 	browserSync.init({
         server: {
-            baseDir: './'
+            baseDir: './build'
         }
 	});
-	gulp.watch('*.html')
+	gulp.watch('./build/*.html')
         .on('change', browserSync.reload);
 });

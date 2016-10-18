@@ -1,1 +1,31 @@
+$enable-flex: true;
+
+@import './node_modules/bootstrap/scss/bootstrap.scss';
 @import 'fonts';
+
+.product-card {
+    &__image {
+        max-width: 100%;
+    }
+
+    &__text {
+        font-family: $sans;
+        font-size: 16px;
+        line-height: 1.25;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+            font-size: 18px;
+        }
+    }
+}
+
+.note {
+    &--stroked {
+        text-decoration: line-through;
+    }
+
+    &--inactive {
+        color: #999;
+    }
+}
