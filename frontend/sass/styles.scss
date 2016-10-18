@@ -3,6 +3,26 @@ $enable-flex: true;
 @import './node_modules/bootstrap/scss/bootstrap.scss';
 @import 'fonts';
 
+.products-list {
+    @include make-row();
+
+    &__item {
+        @include make-col-ready();
+
+        @include media-breakpoint-up(xs) {
+            @include make-col(6);
+        }
+
+        @include media-breakpoint-up(sm) {
+            @include make-col(4);
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(3);
+        }
+    }
+}
+
 .product-card {
     &__image {
         max-width: 100%;
