@@ -5,7 +5,7 @@ import rename from 'gulp-rename';
 import svgmin from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 
-gulp.task('symbols', () => {
+gulp.task('icons', () => {
     return gulp.src('./frontend/assets/svg/**.svg')
         .pipe(svgmin({
             plugins: [{ removeTitle: true }]
