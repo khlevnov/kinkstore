@@ -1,0 +1,16 @@
+.products-list {
+    @include make-row();
+
+    &__item {
+        @include make-col-ready();
+        @include make-col(6);
+
+        @include media-breakpoint-up(sm) {
+            @include make-col(4);
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(3);
+        }
+    }
+}

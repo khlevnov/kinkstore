@@ -10,8 +10,7 @@ gulp.task('symbols', () => {
         .pipe(svgmin({
             plugins: [{ removeTitle: true }]
         }))
-        .pipe(rename({ prefix: 'icon-' }))
         .pipe(svgstore({ inlineSvg: true }))
-        .pipe(rename('symbols.svg'))
+        .pipe(rename('icons.svg'))
         .pipe(gulp.dest('./build/images'));
 });

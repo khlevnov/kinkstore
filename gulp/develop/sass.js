@@ -11,6 +11,10 @@ import autoprefixer from 'autoprefixer';
 gulp.task('sass', function() {
     return gulp.src('./frontend/sass/styles.scss')
         .pipe(sass())
+        .on('error', function(error) {
+            console.log(error.message);
+            this.emit('end');
+        })
         .pipe(postcss([
             autoprefixer({
                 browsers: ['last 4 versions']

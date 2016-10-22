@@ -1,0 +1,5 @@
+.page-main {
+    padding-bottom: 5rem;
+
+    @include make-container();
+}

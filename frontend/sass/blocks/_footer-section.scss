@@ -1,0 +1,14 @@
+.footer-section {
+    &__list {
+        line-height: 2rem;
+    }
+
+    &__link {
+        border-bottom: 1px solid #333;
+        color: #fff;
+    }
+
+    &__nike-partner {
+        margin-top: 2rem;
+    }
+}

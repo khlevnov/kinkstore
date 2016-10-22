@@ -1,0 +1,51 @@
+.page-footer {
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    line-height: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+    @include make-row();
+
+    &__sections {
+        @include make-col-ready();
+        @include make-col(10);
+        @include make-col-push(1);
+        @include make-row();
+    }
+
+    &__section {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+
+        @include make-col-ready();
+
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(4);
+        }
+
+        @include media-breakpoint-only(md) {
+            border-bottom: 1px solid #333;
+
+            &:nth-last-child(1),
+            &:nth-last-child(2) {
+                border-bottom: none;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            border-bottom: 1px solid #333;
+
+            &:nth-last-child(1),
+            &:nth-last-child(2),
+            &:nth-last-child(3) {
+                border-bottom: none;
+            }
+        }
+    }
+}
