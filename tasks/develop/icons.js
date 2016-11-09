@@ -1,9 +1,9 @@
 'use strict';
 
-import gulp from 'gulp';
-import rename from 'gulp-rename';
-import svgmin from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
+const gulp = require('gulp');
+const rename = require('gulp-rename');
+const svgmin = require('gulp-svgmin');
+const svgstore = require('gulp-svgstore');
 
 gulp.task('icons', () => {
     return gulp.src('./frontend/assets/svg/**.svg')

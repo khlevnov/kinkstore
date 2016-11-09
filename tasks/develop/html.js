@@ -1,7 +1,7 @@
 'use strict';
 
-import gulp from 'gulp';
-import changed from 'gulp-changed';
+const gulp = require('gulp');
+const changed = require('gulp-changed');
 
 gulp.task('html', function() {
     return gulp.src('./frontend/html/*.html')

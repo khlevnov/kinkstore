@@ -1,12 +1,12 @@
 'use strict';
 
-import gulp from 'gulp';
-import sass from 'gulp-sass';
-import browserSync from 'browser-sync';
-import csso from 'gulp-csso';
-import mqpacker from 'css-mqpacker';
-import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const browserSync = require('browser-sync');
+const csso = require('gulp-csso');
+const mqpacker = require('css-mqpacker');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
 
 gulp.task('sass', function() {
     return gulp.src('./frontend/sass/styles.scss')

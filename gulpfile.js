@@ -1,26 +1,26 @@
 'use strict';
 
-import gulp from 'gulp';
-import requireDir from 'require-dir';
+const gulp = require('gulp');
+const requireDir = require('require-dir');
 
-requireDir('./gulp/develop');
+requireDir('./tasks/develop');
 
 gulp.task('watch', function() {
 	gulp.watch('./frontend/sass/**/*.scss', gulp.series('sass'));
 	gulp.watch('./frontend/html/**/*.html', gulp.series('html'));
-	gulp.watch('./frontend/pages/**/*.twig', gulp.series('twig'));
+	gulp.watch('./frontend/pages/**/*.pug', gulp.series('pug'));
 	gulp.watch('./frontend/assets/svg/**/*.svg', gulp.series('icons'));
 });
 
 gulp.task(
     'build',
     gulp.series(
-        'twig',
+        'pug',
         'html',
         gulp.parallel(
             'icons',
             'sass',
-            'assets',
+            'assets'
         )
     )
 );

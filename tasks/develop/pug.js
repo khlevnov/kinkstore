@@ -1,11 +1,11 @@
 'use strict';
 
-import gulp from 'gulp';
-import twig from 'gulp-twig';
+const gulp = require('gulp');
+const pug = require('gulp-pug');
 
-gulp.task('twig', function() {
-    return gulp.src('./frontend/pages/*.twig')
-        .pipe(twig())
+gulp.task('pug', function() {
+    return gulp.src('./frontend/pages/*.pug')
+        .pipe(pug())
         .on('error', function(error) {
             console.log(error.message);
             this.emit('end');
