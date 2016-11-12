@@ -5,10 +5,10 @@ block title
 
 block content
     main.page-main
-        .promo
+        figure.promo
             picture
-                source(media="(min-width: 768px)", srcset="http://www.kinkstore.ru/images/shop/large/6543_nike-sb-stefan-janoski.jpg")
-                img.promo__inner(srcset="http://www.kinkstore.ru/images/shop/large/6497_nike-sb-stefan-janoski.jpg 2x", src="http://www.kinkstore.ru/images/shop/large/6494_nike-sb-stefan-janoski.jpg", alt="")
+                source(media="(min-width: 992px)", srcset="/images/promo/affex/1920.jpg")
+                img.promo__image(srcset="/images/promo/affex/1534.jpg 2x", src="/images/promo/affex/767.jpg", alt="")
         .products-list
             - for (var i = 0; i < 20; i++)
                 figure.product-card.products-list__item
