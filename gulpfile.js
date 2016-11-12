@@ -6,9 +6,9 @@ const requireDir = require('require-dir');
 requireDir('./tasks/develop');
 
 gulp.task('watch', function() {
-	gulp.watch('./frontend/sass/**/*.scss', gulp.series('sass'));
+	gulp.watch('./frontend/**/*.scss', gulp.series('sass'));
 	gulp.watch('./frontend/html/**/*.html', gulp.series('html'));
-	gulp.watch('./frontend/pages/**/*.pug', gulp.series('pug'));
+	gulp.watch('./frontend/**/*.pug', gulp.series('pug'));
 	gulp.watch('./frontend/assets/svg/**/*.svg', gulp.series('icons'));
 });
 

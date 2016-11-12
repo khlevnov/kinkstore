@@ -5,10 +5,15 @@ block title
 
 block content
     main.page-main
+        .promo
+            picture
+                source(media="(min-width: 768px)", srcset="http://www.kinkstore.ru/images/shop/large/6543_nike-sb-stefan-janoski.jpg")
+                img.promo__inner(srcset="http://www.kinkstore.ru/images/shop/large/6497_nike-sb-stefan-janoski.jpg 2x", src="http://www.kinkstore.ru/images/shop/large/6494_nike-sb-stefan-janoski.jpg", alt="")
         .products-list
-            figure.product-card.products-list__item
-                img(src="//www.kinkstore.ru/images/shop/large/8010_nike-air-huarache-wmns.jpg")
-                figcaption.product-card__text Кроссовки женские Nike Air
-                    .product-card__text
-                        .note.note--stroked.note--inactive 5 990 ₽
-                        | 5 490 ₽
+            - for (var i = 0; i < 20; i++)
+                figure.product-card.products-list__item
+                    img.product-card__image(src="//www.kinkstore.ru/images/shop/large/8010_nike-air-huarache-wmns.jpg")
+                    figcaption.product-card__text Кроссовки женские Nike Air
+                        .product-card__text
+                            .note.note--stroked.note--inactive 5 990 ₽
+                            | 5 490 ₽

@@ -1,0 +1,10 @@
+.promo {
+    height: auto;
+    min-width: 320px;
+    width: 100vw;
+
+    &__inner {
+        max-width: 100%;
+        width: 100%;
+    }
+}

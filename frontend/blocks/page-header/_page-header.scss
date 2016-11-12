@@ -1,0 +1,22 @@
+.page-header {
+    height: 4rem;
+
+    @include make-row();
+
+    &__logo {
+        align-items: center;
+        display: flex;
+        margin-left: 15px;
+
+        @include make-col-ready();
+        @include make-col(4);
+    }
+
+    &__logo-inner {
+        max-width: 100%;
+    }
+
+    &__hamburger {
+        //
+    }
+}
