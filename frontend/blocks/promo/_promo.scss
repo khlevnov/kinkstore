@@ -11,14 +11,16 @@
     }
 
     &__image {
-        max-width: 100%;
         width: 100%;
+
+        @include media-breakpoint-down(lg) {
+            max-width: 100%;
+        }
 
         @include media-breakpoint-up(lg) {
             height: 600px;
             left: 50%;
             margin-left: -960px;
-            max-width: none;
             position: absolute;
             width: 1920px;
         }

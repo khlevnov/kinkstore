@@ -9,6 +9,27 @@ html(lang="ru")
             block title
                 | Title
     body.page
-        // include ../blocks/page-header/page-header.pug
-        block content
-        // include ../blocks/page-footer/page-footer.pug
+        .page__inner
+            include ../blocks/page-header/page-header.pug
+            .menu-line.page-header__menu
+                .menu-line__inner
+                    .menu-line__root-item
+                        a.menu-line__root-link(href="").
+                            Каталог
+                    .menu-line__root-item
+                        a.menu-line__root-link(href="").
+                            Sale
+                    .menu-line__root-item
+                        a.menu-line__root-link(href="").
+                            Блог
+                    .menu-line__root-item
+                        a.menu-line__root-link(href="").
+                            Магазин
+                    .menu-line__root-item
+                        a.menu-line__root-link(href="").
+                            Информация
+                    .menu-line__root-item
+                        a.menu-line__root-link(href="").
+                            Контакты
+            block content
+            include ../blocks/page-footer/page-footer.pug

@@ -1,0 +1,59 @@
+.menu-line {
+    background-color: #000;
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    @include make-row();
+
+    &__inner {
+        animation-delay: 0.5s;
+        animation-duration: 1s;
+        animation-name: menu-line-initial-scroll;
+        animation-fill-mode: forwards;
+        display: flex;
+        margin-left: -10rem;
+        min-width: 100%;
+
+        @include media-breakpoint-up(sm) {
+            animation: none;
+            margin-left: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col-ready();
+            @include make-col(10);
+            @include make-col-push(1);
+        }
+    }
+
+    &__root-item {
+        flex-basis: 1px;
+        flex-grow: 1;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    &__root-link {
+        color: #fff;
+        display: block;
+        margin: 0 -15px;
+
+        &:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    }
+}
+
+@keyframes menu-line-initial-scroll {
+    from {
+        margin-left: -10rem;
+    }
+
+    to {
+        margin-left: 0;
+    }
+}
